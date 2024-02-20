@@ -1,8 +1,7 @@
 package com.mozhimen.optk.fps
 
 import com.mozhimen.basick.lintk.optins.OApiInit_InApplication
-import com.mozhimen.basick.manifestk.cons.CPermission
-import com.mozhimen.basick.manifestk.annors.AManifestKRequire
+import com.mozhimen.basick.lintk.optins.permission.OPermission_SYSTEM_ALERT_WINDOW
 import com.mozhimen.optk.fps.commons.IOptKFps
 import com.mozhimen.optk.fps.helpers.OptKFpsDelegate
 
@@ -13,8 +12,8 @@ import com.mozhimen.optk.fps.helpers.OptKFpsDelegate
  * @Date 2022/3/31 17:12
  * @Version 1.0
  */
+@OptIn(OPermission_SYSTEM_ALERT_WINDOW::class)
 @OApiInit_InApplication
-@AManifestKRequire(CPermission.SYSTEM_ALERT_WINDOW)
 class OptKFps : IOptKFps by OptKFpsDelegate() {
     companion object {
         @JvmStatic

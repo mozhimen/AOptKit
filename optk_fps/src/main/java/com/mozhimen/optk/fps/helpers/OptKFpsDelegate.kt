@@ -8,11 +8,10 @@ import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.WindowManager
 import android.widget.TextView
-import com.mozhimen.basick.manifestk.cons.CPermission
 import com.mozhimen.basick.elemk.android.view.cons.CWinMgr
 import com.mozhimen.basick.elemk.kotlin.properties.VarProperty_GetNonnull
 import com.mozhimen.basick.lintk.optins.OApiInit_InApplication
-import com.mozhimen.basick.manifestk.annors.AManifestKRequire
+import com.mozhimen.basick.lintk.optins.permission.OPermission_SYSTEM_ALERT_WINDOW
 import com.mozhimen.basick.stackk.cb.StackKCb
 import com.mozhimen.basick.stackk.commons.IStackKListener
 import com.mozhimen.basick.utilk.bases.BaseUtilK
@@ -33,8 +32,8 @@ import java.lang.ref.WeakReference
  * @Date 2022/9/22 16:04
  * @Version 1.0
  */
+@OPermission_SYSTEM_ALERT_WINDOW
 @OApiInit_InApplication
-@AManifestKRequire(CPermission.SYSTEM_ALERT_WINDOW)
 class OptKFpsDelegate : IOptKFps, BaseUtilK() {
     private val _params by lazy {
         WindowManager.LayoutParams().apply {
