@@ -1,7 +1,7 @@
 package com.mozhimen.optk.fps.test
 
 import android.os.Bundle
-import com.mozhimen.basick.elemk.androidx.appcompat.bases.databinding.BaseActivityVB
+import com.mozhimen.basick.elemk.androidx.appcompat.bases.databinding.BaseActivityVDB
 import com.mozhimen.basick.lintk.optin.OptInApiInit_InApplication
 import com.mozhimen.basick.utilk.android.widget.showToast
 import com.mozhimen.optk.fps.OptKFps
@@ -16,12 +16,12 @@ import com.mozhimen.optk.fps.test.databinding.ActivityOptkFpsBinding
  * @Version 1.0
  */
 @OptIn(OptInApiInit_InApplication::class)
-class OptKFpsActivity : BaseActivityVB<ActivityOptkFpsBinding>() {
+class OptKFpsActivity : BaseActivityVDB<ActivityOptkFpsBinding>() {
     override fun initView(savedInstanceState: Bundle?) {
-        vb.optkFpsBtn.setOnClickListener {
+        vdb.optkFpsBtn.setOnClickListener {
             OptKFps.instance.toggle()
         }
-        vb.optkFpsBtnTip.setOnClickListener {
+        vdb.optkFpsBtnTip.setOnClickListener {
             OptKFps.instance.isOpen().toString().showToast()
         }
     }
