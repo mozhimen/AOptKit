@@ -62,10 +62,10 @@ class OptKFpsDelegate : IOptKFps, BaseUtilK() {
         StackKCb.instance.addFrontBackListener(object : IStackKListener {
             override fun onChanged(isFront: Boolean, activityRef: WeakReference<Activity>?) {
 //                if (isFront) {
-//                    LogK.dt(TAG, "OptKFpsView onChanged fps start")
+//                    LogK.d(TAG, "OptKFpsView onChanged fps start")
 //                    start()
 //                } else {
-//                    LogK.wt(TAG, "OptKFpsView onChanged fps stop")
+//                    LogK.w(TAG, "OptKFpsView onChanged fps stop")
 //                    stop()
 //                }
                 if (!isFront && isOpen()) {
