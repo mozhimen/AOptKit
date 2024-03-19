@@ -15,8 +15,8 @@ import com.mozhimen.basick.lintk.optins.permission.OPermission_SYSTEM_ALERT_WIND
 import com.mozhimen.basick.stackk.cb.StackKCb
 import com.mozhimen.basick.stackk.commons.IStackKListener
 import com.mozhimen.basick.utilk.bases.BaseUtilK
-import com.mozhimen.basick.utilk.android.app.UtilKPermission
-import com.mozhimen.basick.utilk.android.app.UtilKLaunchActivity
+import com.mozhimen.basick.utilk.android.UtilKPermission
+import com.mozhimen.basick.utilk.android.app.UtilKActivityStart
 import com.mozhimen.basick.utilk.android.os.UtilKBuildVersion
 import com.mozhimen.basick.utilk.android.view.UtilKWindowManager
 import com.mozhimen.basick.utilk.java.text.getStrDecimalOf1
@@ -101,8 +101,8 @@ class OptKFpsDelegate : IOptKFps, BaseUtilK() {
 
     private fun start() {
         if (_isOpen) return
-        if (!UtilKPermission.hasOverlay()) {
-            UtilKLaunchActivity.startManageOverlay(_context)
+        if (!UtilKPermission.hasSystemAlertWindow()) {
+            UtilKActivityStart.startManageOverlayPermission(_context)
             Log.e(TAG, "OptKFpsView play app has no overlay permission")
             return
         }
