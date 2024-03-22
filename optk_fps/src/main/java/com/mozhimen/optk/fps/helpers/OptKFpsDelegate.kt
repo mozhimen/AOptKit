@@ -15,7 +15,7 @@ import com.mozhimen.basick.lintk.optins.permission.OPermission_SYSTEM_ALERT_WIND
 import com.mozhimen.basick.stackk.cb.StackKCb
 import com.mozhimen.basick.stackk.commons.IStackKListener
 import com.mozhimen.basick.utilk.bases.BaseUtilK
-import com.mozhimen.basick.utilk.android.UtilKPermission
+import com.mozhimen.basick.utilk.wrapper.UtilKPermission
 import com.mozhimen.basick.utilk.android.app.UtilKActivityStart
 import com.mozhimen.basick.utilk.android.os.UtilKBuildVersion
 import com.mozhimen.basick.utilk.android.view.UtilKWindowManager
