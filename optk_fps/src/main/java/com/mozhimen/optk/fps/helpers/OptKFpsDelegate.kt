@@ -19,7 +19,7 @@ import com.mozhimen.basick.utilk.wrapper.UtilKPermission
 import com.mozhimen.basick.utilk.android.app.UtilKActivityStart
 import com.mozhimen.basick.utilk.android.os.UtilKBuildVersion
 import com.mozhimen.basick.utilk.android.view.UtilKWindowManager
-import com.mozhimen.basick.utilk.java.text.getStrDecimalOf1
+import com.mozhimen.basick.utilk.java.text.getStrDecimal_of1
 import com.mozhimen.optk.fps.R
 import com.mozhimen.optk.fps.commons.IOptKFps
 import com.mozhimen.optk.fps.commons.IOptKFpsListener
@@ -49,7 +49,7 @@ class OptKFpsDelegate : IOptKFps, BaseUtilK() {
     private var _internalListener = object : IOptKFpsListener {
         @SuppressLint("SetTextI18n")
         override fun onFrame(fps: Double) {
-            _optKfpsView?.text = "${fps.getStrDecimalOf1()} fps"
+            _optKfpsView?.text = "${fps.getStrDecimal_of1(null)} fps"
         }
     }
 
