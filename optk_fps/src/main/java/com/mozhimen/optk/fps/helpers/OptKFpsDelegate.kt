@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.app.Activity
 import android.graphics.PixelFormat
 import android.util.Log
+import com.mozhimen.basick.utilk.android.util.UtilKLogWrapper
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.WindowManager
@@ -69,7 +70,7 @@ class OptKFpsDelegate : IOptKFps, BaseUtilK() {
 //                    stop()
 //                }
                 if (!isFront && isOpen()) {
-                    Log.w(TAG, "OptKFpsView onChanged fps stop")
+                    UtilKLogWrapper.w(TAG, "OptKFpsView onChanged fps stop")
                     stop()
                 }
             }
@@ -103,7 +104,7 @@ class OptKFpsDelegate : IOptKFps, BaseUtilK() {
         if (_isOpen) return
         if (!UtilKPermission.hasSystemAlertWindow()) {
             UtilKActivityStart.startManageOverlayPermission(_context)
-            Log.e(TAG, "OptKFpsView play app has no overlay permission")
+            UtilKLogWrapper.e(TAG, "OptKFpsView play app has no overlay permission")
             return
         }
 
