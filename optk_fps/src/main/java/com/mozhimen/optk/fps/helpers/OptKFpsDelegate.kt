@@ -103,7 +103,7 @@ class OptKFpsDelegate : IOptKFps, BaseUtilK() {
     private fun start() {
         if (_isOpen) return
         if (!UtilKPermission.hasSystemAlertWindow()) {
-            UtilKActivityStart.startManageOverlayPermission(_context)
+            UtilKActivityStart.startSettingManageOverlayPermission(_context)
             UtilKLogWrapper.e(TAG, "OptKFpsView play app has no overlay permission")
             return
         }
