@@ -14,15 +14,22 @@ interface IOptKFps {
      * @return Boolean
      */
     fun isOpen(): Boolean
+
     /**
      * 开/关
      */
     fun toggle()
+
+    fun start()
+
+    fun stop()
+
     /**
      * 增加监听器
      * @param listener IOptKFpsListener
      */
     fun addListener(listener: IOptKFpsListener)
+
     /**
      * 清空监听器
      */

@@ -12,8 +12,8 @@ import com.mozhimen.optk.fps.helpers.OptKFpsDelegate
  * @Date 2022/3/31 17:12
  * @Version 1.0
  */
-@OptIn(OPermission_SYSTEM_ALERT_WINDOW::class)
 @OApiInit_InApplication
+@OPermission_SYSTEM_ALERT_WINDOW
 class OptKFps : IOptKFps by OptKFpsDelegate() {
     companion object {
         @JvmStatic
