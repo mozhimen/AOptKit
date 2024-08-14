@@ -7,7 +7,7 @@ package com.mozhimen.optk.obj.pool.mos
  * @Date 2024/8/6
  * @Version 1.0
  */
-data class CacheObj(
-    var isUsing: Boolean,
-    var obj: Any
+data class LockedObj<T : Any>(
+    var isUsed: Boolean,
+    var obj: T
 )

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/main_apply_for"
+        style="@style/StyleK_Btn"
+        android:text="申请一个对象"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/main_give_back"
+        style="@style/StyleK_Btn"
+        android:text="归还一个对象"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/main_invoke"
+        style="@style/StyleK_Btn"
+        android:text="操作一下当前对象"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/main_get_all"
+        style="@style/StyleK_Btn"
+        android:text="打印所有对象"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/main_recycle_all"
+        style="@style/StyleK_Btn"
+        android:text="清除所有对象"
+        tools:ignore="HardcodedText" />
+</LinearLayout>

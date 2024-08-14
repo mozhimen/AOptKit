@@ -17,12 +17,13 @@ dependencyResolutionManagement {
         google()
     }
 }
-rootProject.name = "AOptKit_fps"
+rootProject.name = "AOptKit"
 include ':app'
 include ':optk_fps'
+include ':optk_obj_pool'
 //SwiftKit
 include ':SwiftKit'
 project(':SwiftKit').projectDir = new File("D:\\WorkSpace\\GitHub\\SwiftKit")
 include ':SwiftKit:basick'
 include ':SwiftKit:xmlk'
-include ':optk_obj_pool'
+include ':optk_obj_pool_test'

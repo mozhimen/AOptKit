@@ -24,7 +24,6 @@ import com.mozhimen.optk.fps.R
 import com.mozhimen.optk.fps.commons.IOptKFps
 import com.mozhimen.optk.fps.commons.IOptKFpsListener
 import com.mozhimen.optk.fps.impls.ChoreographerFrameCallback
-import java.lang.ref.WeakReference
 
 /**
  * @ClassName FpsViewer
@@ -52,7 +51,7 @@ class OptKFpsDelegate : IOptKFps, BaseUtilK() {
         object : IOptKFpsListener {
             @SuppressLint("SetTextI18n")
             override fun onFrame(fps: Double) {
-                _optKFpsView?.text = "${fps.getStrDecimal_of1(null)} fps"
+                _optKFpsView?.text = "${fps.getStrDecimal_of1()} fps"
             }
         }
     }
@@ -66,7 +65,7 @@ class OptKFpsDelegate : IOptKFps, BaseUtilK() {
 
     init {
         StackKCb.instance.addFrontBackListener(object : IStackKListener {
-            override fun onChanged(isFront: Boolean, activityRef: WeakReference<Activity>?) {
+            override fun onChanged(isFront: Boolean, activity: Activity) {
 //                if (isFront) {
 //                    LogK.d(TAG, "OptKFpsView onChanged fps start")
 //                    start()

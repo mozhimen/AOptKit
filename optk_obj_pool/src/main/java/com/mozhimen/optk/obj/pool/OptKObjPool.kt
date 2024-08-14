@@ -2,7 +2,8 @@ package com.mozhimen.optk.obj.pool
 
 import com.mozhimen.basick.utilk.android.util.UtilKLogWrapper
 import com.mozhimen.optk.obj.pool.commons.IOptKObjPool
-import com.mozhimen.optk.obj.pool.helpers.CacheObjContainer
+import com.mozhimen.optk.obj.pool.helpers.ObjContainer
+import com.mozhimen.optk.obj.pool.mos.LockedObj
 
 
 /**
@@ -13,7 +14,7 @@ import com.mozhimen.optk.obj.pool.helpers.CacheObjContainer
  * @Version 1.0
  */
 class OptKObjPool : IOptKObjPool {
-    private val _cacheObjContainers = HashMap<String, CacheObjContainer>()
+    private val _cacheObjContainers = HashMap<String, ObjContainer<Any>>()
 
     //////////////////////////////////////////////////////////////////////
 
@@ -23,11 +24,11 @@ class OptKObjPool : IOptKObjPool {
         try {
             val className: String = clazz.getName()
             if (_cacheObjContainers.containsKey(className)) {
-                return _cacheObjContainers[className]!!.applyFor() as? T?
+                return _cacheObjContainers[className]!!.applyFor(null) as? T?
             } else {
-                val container = CacheObjContainer(clazz)
-                _cacheObjContainers[className] = container
-                return container.applyFor() as? T?
+                val container = ObjContainer(clazz)
+                _cacheObjContainers[className] = container as ObjContainer<Any>
+                return container.applyFor(null) as? T?
             }
         } catch (e: Exception) {
             e.printStackTrace()
@@ -60,11 +61,18 @@ class OptKObjPool : IOptKObjPool {
     }
 
     @Synchronized
+    override fun <T : Any> getLockedObjs(clazz: Class<T>): List<LockedObj<T>> {
+        val clazzName: String = clazz.getName()
+        return if (_cacheObjContainers.containsKey(clazzName)) {
+            _cacheObjContainers[clazzName]!!.getLockedObjs() as? List<LockedObj<T>>? ?: emptyList()
+        } else
+            emptyList()
+    }
+
+    @Synchronized
     override fun recycleAll() {
-        val iterator: Iterator<*> = _cacheObjContainers.keys.iterator()
-        while (iterator.hasNext()) {
-            val key = iterator.next() as String
-            _cacheObjContainers[key]!!.recycleAll()
+        _cacheObjContainers.keys.forEach {
+            _cacheObjContainers[it]!!.recycleAll()
         }
         _cacheObjContainers.clear()
     }
