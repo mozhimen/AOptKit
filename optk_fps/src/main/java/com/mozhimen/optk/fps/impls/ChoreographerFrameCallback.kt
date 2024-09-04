@@ -1,7 +1,7 @@
 package com.mozhimen.optk.fps.impls
 
 import android.view.Choreographer
-import com.mozhimen.basick.utilk.commons.IUtilK
+import com.mozhimen.kotlin.utilk.commons.IUtilK
 import com.mozhimen.optk.fps.commons.IOptKFpsListener
 import java.util.concurrent.TimeUnit
 

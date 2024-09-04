@@ -1,6 +1,6 @@
 package com.mozhimen.optk.obj.pool.helpers
 
-import com.mozhimen.basick.utilk.android.util.UtilKLogWrapper
+import com.mozhimen.kotlin.utilk.android.util.UtilKLogWrapper
 import com.mozhimen.optk.obj.pool.commons.IOptKObjContainer
 import com.mozhimen.optk.obj.pool.mos.LockedObj
 

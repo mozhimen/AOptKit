@@ -1,7 +1,7 @@
 package com.mozhimen.optk.fps
 
-import com.mozhimen.basick.lintk.optins.OApiInit_InApplication
-import com.mozhimen.basick.lintk.optins.permission.OPermission_SYSTEM_ALERT_WINDOW
+import com.mozhimen.kotlin.lintk.optins.OApiInit_InApplication
+import com.mozhimen.kotlin.lintk.optins.permission.OPermission_SYSTEM_ALERT_WINDOW
 import com.mozhimen.optk.fps.commons.IOptKFps
 import com.mozhimen.optk.fps.helpers.OptKFpsDelegate
 

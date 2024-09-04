@@ -1,6 +1,6 @@
 package com.mozhimen.optk.obj.pool.commons
 
-import com.mozhimen.basick.utilk.commons.IUtilK
+import com.mozhimen.kotlin.utilk.commons.IUtilK
 import com.mozhimen.optk.obj.pool.mos.LockedObj
 
 /**

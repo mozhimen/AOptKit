@@ -1,8 +1,8 @@
 package com.mozhimen.optk.obj.pool.commons
 
-import com.mozhimen.basick.elemk.commons.IApplicable
-import com.mozhimen.basick.elemk.commons.IReturnable
-import com.mozhimen.basick.utilk.commons.IUtilK
+import com.mozhimen.kotlin.elemk.commons.IApplicable
+import com.mozhimen.kotlin.elemk.commons.IReturnable
+import com.mozhimen.kotlin.utilk.commons.IUtilK
 import com.mozhimen.optk.obj.pool.mos.LockedObj
 
 /**

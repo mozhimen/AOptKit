@@ -1,9 +1,9 @@
 package com.mozhimen.optk.fps.test
 
 import android.os.Bundle
-import com.mozhimen.basick.elemk.androidx.appcompat.bases.databinding.BaseActivityVDB
-import com.mozhimen.basick.lintk.optin.OptInApiInit_InApplication
-import com.mozhimen.basick.utilk.android.widget.showToast
+import com.mozhimen.basick.bases.databinding.BaseActivityVDB
+import com.mozhimen.kotlin.lintk.optin.OptInApiInit_InApplication
+import com.mozhimen.kotlin.utilk.android.widget.showToast
 import com.mozhimen.optk.fps.OptKFps
 import com.mozhimen.optk.fps.test.databinding.ActivityOptkFpsBinding
 
