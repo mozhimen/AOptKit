@@ -21,9 +21,20 @@ rootProject.name = "AOptKit"
 include ':app'
 include ':optk_fps'
 include ':optk_obj_pool'
+include ':optk_obj_pool_test'
 //SwiftKit
 include ':SwiftKit'
 project(':SwiftKit').projectDir = new File("D:\\WorkSpace\\GitHub\\SwiftKit")
 include ':SwiftKit:basick'
 include ':SwiftKit:xmlk'
-include ':optk_obj_pool_test'
+include ':SwiftKit:bindk'
+//AStackKit
+include ':AStackKit'
+project(':AStackKit').projectDir = new File("D:\\WorkSpace\\GitHub\\AStackKit")
+include ':AStackKit:basic'
+include ':AStackKit:stackk_callback'
+//KUtilKit
+include ':KUtilKit'
+project(':KUtilKit').projectDir = new File("D:\\WorkSpace\\GitHub\\KUtilKit")
+include ':KUtilKit:utilk_android'
+include ':KUtilKit:utilk_kotlin'

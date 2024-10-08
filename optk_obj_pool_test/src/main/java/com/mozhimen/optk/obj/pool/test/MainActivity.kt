@@ -1,11 +1,7 @@
 package com.mozhimen.optk.obj.pool.test
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.mozhimen.bindk.bases.activity.viewbinding.BaseActivityVB
+import com.mozhimen.bindk.bases.viewbinding.activity.BaseActivityVB
 import com.mozhimen.kotlin.elemk.java.util.cons.CDateFormat
 import com.mozhimen.kotlin.utilk.android.util.UtilKLogWrapper
 import com.mozhimen.kotlin.utilk.commons.IUtilK

@@ -40,6 +40,7 @@ dependencies {
 
     implementation project(':SwiftKit:basick')
     implementation project(':SwiftKit:xmlk')
+    implementation project(':SwiftKit:bindk')
     implementation project(':optk_fps')
 
     testImplementation 'junit:junit:4.13.2'
