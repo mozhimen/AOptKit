@@ -20,8 +20,9 @@ dependencyResolutionManagement {
 rootProject.name = "AOptKit"
 include ':app'
 include ':optk_fps'
-include ':optk_obj_pool'
-include ':optk_obj_pool_test'
+include ':optk_objpool'
+include ':optk_objpool_test'
+include ':optk_watchdog'
 //SwiftKit
 include ':SwiftKit'
 project(':SwiftKit').projectDir = new File("D:\\WorkSpace\\GitHub\\SwiftKit")
@@ -31,7 +32,7 @@ include ':SwiftKit:bindk'
 //AStackKit
 include ':AStackKit'
 project(':AStackKit').projectDir = new File("D:\\WorkSpace\\GitHub\\AStackKit")
-include ':AStackKit:basic'
+include ':AStackKit:stackk_basic'
 include ':AStackKit:stackk_callback'
 //KUtilKit
 include ':KUtilKit'
