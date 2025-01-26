@@ -1,18 +1,20 @@
 plugins {
-    id 'com.android.library'
+    id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
 }
 
 android {
-    namespace 'com.mozhimen.optk.fps'
+    namespace 'com.mozhimen.optk.objpool.test'
     compileSdk 34
 
     defaultConfig {
-        minSdk 19
-        multiDexEnabled true
+        applicationId "com.mozhimen.optk.objpool.test"
+        minSdk 21
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
 
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles "consumer-rules.pro"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -28,18 +30,18 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    lintOptions {
-        checkReleaseBuilds false
-        abortOnError false
+    buildFeatures{
+        viewBinding true
     }
 }
 
 dependencies {
-    implementation project(':SwiftKit:basick')
-    implementation project(':AStackKit:stackk_callback')
-    //test
+    implementation project(':ASwiftKit:bindk')
+    implementation project(':ASwiftKit:basick')
+    implementation project(':ASwiftKit:xmlk')
+    implementation project(':objpool')
+
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
-
 }

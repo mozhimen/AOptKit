@@ -1,26 +1,24 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
 }
 
 android {
-    namespace 'com.mozhimen.optk.objpool.test'
+    namespace 'com.mozhimen.optk.objpool'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.mozhimen.optk.objpool.test"
-        minSdk 21
-        targetSdk 34
-        versionCode 1
-        versionName "1.0"
+        minSdk 19
+        multiDexEnabled true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+//        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
     compileOptions {
@@ -30,16 +28,10 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    buildFeatures{
-        viewBinding true
-    }
 }
 
 dependencies {
-    implementation project(':SwiftKit:bindk')
-    implementation project(':SwiftKit:basick')
-    implementation project(':SwiftKit:xmlk')
-    implementation project(':optk_objpool')
+    implementation project(':ASwiftKit:basick')
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
