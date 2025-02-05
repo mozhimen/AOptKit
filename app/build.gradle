@@ -40,7 +40,7 @@ dependencies {
 
     implementation project(':ASwiftKit:basick')
     implementation project(':ASwiftKit:xmlk')
-    implementation project(':ASwiftKit:bindk')
+    implementation project(':ASwiftKit:uik:databinding')
     implementation project(':fps')
 
     testImplementation 'junit:junit:4.13.2'
