@@ -9,7 +9,7 @@ import android.view.LayoutInflater
 import android.view.WindowManager
 import android.widget.TextView
 import com.mozhimen.kotlin.elemk.android.view.cons.CWinMgr
-import com.mozhimen.kotlin.elemk.kotlin.properties.VarProperty_GetNonnull
+import com.mozhimen.kotlin.elemk.kotlin.impls.properties.VarProperty_GetNonnull
 import com.mozhimen.kotlin.lintk.optins.OApiInit_InApplication
 import com.mozhimen.kotlin.lintk.optins.permission.OPermission_SYSTEM_ALERT_WINDOW
 import com.mozhimen.stackk.callback.StackKCb
